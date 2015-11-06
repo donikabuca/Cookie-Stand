@@ -35,6 +35,7 @@ function CookieStand(storeLocations, minCustHr, maxCustHr, avgPerCust) {
      tbl.appendChild(row);
    }
    var totalCookie = document.createElement('tr');
+     totalCookie.setAttribute("class","total");
      totalCookie.textContent = this.dailyTotal;
      row.appendChild(totalCookie);
      tbl.appendChild(row);
@@ -52,10 +53,13 @@ var tbl = document.createElement('table');
 var headerRow = document.createElement('thead');
 
 var emptyCell = document.createElement('td');
-   headerRow.appendChild(emptyCell);
+    emptyCell.setAttribute("class","empty");
+    headerRow.appendChild(emptyCell);
 
 for (var i = 0; i < hours.length; i++) {
  var td = document.createElement('td');
+ td.setAttribute("td","cell");
+ td.setAttribute("td","hours");
  td.innerHTML = hours[i];
  headerRow.appendChild(td);
 };
